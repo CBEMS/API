@@ -18,9 +18,9 @@ $content = array();
 
 while ($row = $result->fetch_assoc())
 {
-$notifications_ids[] = $row['reading_id'];
-$notifications_times[] = $row['reading_time'];
-$content[] = $row['value'];
+$notifications_ids[] = $row['notification_id'];
+$notifications_times[] = $row['notification_time'];
+$content[] = $row['content'];
 }
 
 $jsonData = array("notifications_ids" => $notifications_ids, "notifications_times" => $notifications_times, "content" => $content);
