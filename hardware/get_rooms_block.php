@@ -5,9 +5,8 @@ $user_id = $_GET['user_id'];
 $block_id = $_GET['block_id'];
 
 $sql = "SELECT room_id, name
-FROM rooms, blocks
-WHERE blocks.user_id = $user_id
-AND rooms.block_id = $block_id;";
+FROM rooms
+WHERE rooms.block_id = $block_id;";
 
 $result = $DB->query($sql);
 
